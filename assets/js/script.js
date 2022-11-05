@@ -1,4 +1,9 @@
 // DEPENDENCIES
+let playerState = 'idle';
+const dropdown = document.getElementById('animations');
+dropdown.addEventListener('change', e => {
+  playerState = e.target.value;
+});
 // canvas element
 const canvas = document.getElementById('canvas1');
 // shortcut for contex
@@ -17,7 +22,6 @@ const spriteWidth = 575;
 // height of entire file / number of rows in file = 1 frame
 // 5230 / 10 = 523
 const spriteHeight = 523;
-let playerState = 'jump';
 
 let gameFrame = 0;
 const staggerFrames = 8;
